@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Experiment 7</title>
+		<meta charset="utf-8"/>
+		<script>
+			function validate(){
+				if(document.form.nm.value==""){
+					alert("enter name");
+					document.form.nm.focus();
+					return false;
+				}
+				if(document.form.email.value==""){
+					alert("enter email");
+					document.form.nm.focus();
+					return false;
+				}
+				if((document.form.zip.value=="") || (document.form.zip.value.length != 5)){
+					alert("enter zip");
+					document.form.nm.focus();
+					return false;
+				}
+				if(document.form.con.value==""){
+					alert("enter country");
+					document.form.nm.focus();
+					return false;
+				}
+				return true;
+			}
+			function validateEmail(){
+				var email = document.form.email.value;
+				var at = email.indexOf("@");
+				var dot = email.lastIndexOf(".");
+				if(at<1 || (dot-at<2)){
+					alert("enter correct email");
+					document.form.nm.focus();
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="form" onsubmit="return(validate());">
+			<table border="0" cellspacing="0">
+				<tr><td>Name</td>
+					<td><input type="text" name="nm"/></td>
+				</tr>
+				<tr><td>email</td>
+					<td><input type="email" name="email" onchange="validateEmail();"/></td>
+				</tr>
+				<tr><td>Zipcode</td>
+					<td><input type="text" name="zip"/></td>
+				</tr>
+				<tr><td>Country</td>
+					<td><input type="text" name="con"/></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="SUBMIT"/></td>
+				</tr>
+			</table>
+		</form>
+	<body>
+<html>
+			
+					
+				

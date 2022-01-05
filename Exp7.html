@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Experiment 6</title>
+		<meta charset="utf-8"/>
+		<script>
+			function evaldis(){
+				var exp = document.form.exp.value;
+				var result = eval(exp);
+				document.form.result.value = result;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="form">
+			<table border="0" cellspacing="0">
+				<tr><td>Enter math expression</td>
+					<td><input type="text" name="exp"/></td>
+				</tr>
+				<tr><td>Result</td>
+					<td><input type="text" name="result"/></td>
+				</tr>
+				<tr><td></td><td><input type="button" value="Calculate" onclick="evaldis()"/></td>
+				</tr>
+			</table>
+		</form>
+		
+	</body>
+</html>
